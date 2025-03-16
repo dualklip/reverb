@@ -42,13 +42,13 @@ class Factory
         ?string $hostname = null,
         int $maxRequestSize = 10_000,
         array $options = [],
-        string $protocol = 'pusher',
+        string $protocol = 'twilio',
         ?LoopInterface $loop = null
     ): HttpServer {
         $loop = $loop ?: Loop::get();
 
         $router = match ($protocol) {
-            'pusher' => static::makePusherRouter(),
+            'twilio' => static::makePusherRouter(),
             default => throw new InvalidArgumentException("Unsupported protocol [{$protocol}]."),
         };
 
