@@ -28,6 +28,17 @@ class ServerProviderManager extends Manager
     }
 
     /**
+     * Creates the Twilio driver.
+     */
+    public function createTwilioDriver(): ReverbServerProvider
+    {
+        return new ReverbServerProvider(
+            $this->app,
+            $this->config->get('reverb.servers.twilio', [])
+        );
+    }
+
+    /**
      * Get the default driver name.
      */
     public function getDefaultDriver(): string
