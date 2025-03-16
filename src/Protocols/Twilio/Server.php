@@ -58,7 +58,7 @@ class Server
 
             Validator::make($event, ['event' => ['required', 'string']])->validate();
 
-            match (Str::startsWith($event['event'], 'pusher:')) {
+            match (Str::isMatch($event['event'], '[start|media|stop|dtmf|mark]')) {
                 true => $this->handler->handle(
                     $from,
                     $event['event'],
