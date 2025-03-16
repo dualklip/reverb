@@ -2,7 +2,7 @@
 
 namespace Laravel\Reverb\Protocols\Twilio;
 
-use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelManager;
+use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelManager;
 use Laravel\Reverb\Servers\Twilio\Contracts\PubSubIncomingMessageHandler;
 
 class PusherPubSubIncomingMessageHandler implements PubSubIncomingMessageHandler

@@ -3,7 +3,7 @@
 namespace Laravel\Reverb\Protocols\Twilio\Contracts;
 
 use Laravel\Reverb\Contracts\Connection;
-use Laravel\Reverb\Protocols\Twilio\Channels\ChannelConnection;
+use Laravel\Reverb\Protocols\Pusher\Channels\ChannelConnection;
 
 interface ChannelConnectionManager
 {
@@ -35,7 +35,7 @@ interface ChannelConnectionManager
     /**
      * Get all of the connections.
      *
-     * @return array<string, \Laravel\Reverb\Protocols\Twilio\Channels\ChannelConnection>
+     * @return array<string, \Laravel\Reverb\Protocols\Pusher\Channels\ChannelConnection>
      */
     public function all(): array;
 

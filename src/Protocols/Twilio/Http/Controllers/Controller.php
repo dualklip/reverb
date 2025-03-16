@@ -6,7 +6,7 @@ use Illuminate\Support\Arr;
 use Laravel\Reverb\Application;
 use Laravel\Reverb\Contracts\ApplicationProvider;
 use Laravel\Reverb\Exceptions\InvalidApplication;
-use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelManager;
+use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelManager;
 use Laravel\Reverb\Servers\Twilio\Concerns\ClosesConnections;
 use Laravel\Reverb\Servers\Twilio\Http\Connection;
 use Psr\Http\Message\RequestInterface;
