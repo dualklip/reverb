@@ -58,14 +58,14 @@ class Server
 
             Validator::make($event, ['event' => ['required', 'string']])->validate();
 
-            match (Str::isMatch($event['event'], '[start|media|stop|dtmf|mark]')) {
+            /*match (Str::isMatch($event['event'], '[start|media|stop|dtmf|mark]')) {
                 true => $this->handler->handle(
                     $from,
                     $event['event'],
                     empty($event[$event['event']]) ? [] : $event[$event['event']],
                 ),
                 default => ClientEvent::handle($from, $event)
-            };
+            };*/
 
             Log::info('Message Handled', $from->id());
 
