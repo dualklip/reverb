@@ -58,14 +58,14 @@ class Server
 
             Validator::make($event, ['event' => ['required', 'string']])->validate();
 
-            match (Str::startsWith($event['event'], 'pusher:')) {
+            /*match (Str::startsWith($event['event'], 'pusher:')) {
                 true => $this->handler->handle(
                     $from,
                     $event['event'],
                     empty($event['data']) ? [] : $event['data'],
                 ),
                 default => ClientEvent::handle($from, $event)
-            };
+            };*/
 
             Log::info('Message Handled', $from->id());
 
