@@ -4,7 +4,7 @@ namespace Laravel\Reverb\Protocols\Twilio\Channels\Concerns;
 
 use Illuminate\Support\Str;
 use Laravel\Reverb\Contracts\Connection;
-use Laravel\Reverb\Protocols\Pusher\Exceptions\ConnectionUnauthorized;
+use Laravel\Reverb\Protocols\Twilio\Exceptions\ConnectionUnauthorized;
 
 trait InteractsWithPrivateChannels
 {

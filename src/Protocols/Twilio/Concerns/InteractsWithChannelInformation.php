@@ -3,10 +3,10 @@
 namespace Laravel\Reverb\Protocols\Twilio\Concerns;
 
 use Laravel\Reverb\Application;
-use Laravel\Reverb\Protocols\Pusher\Channels\CacheChannel;
-use Laravel\Reverb\Protocols\Pusher\Channels\Channel;
-use Laravel\Reverb\Protocols\Pusher\Channels\Concerns\InteractsWithPresenceChannels;
-use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelManager;
+use Laravel\Reverb\Protocols\Twilio\Channels\CacheChannel;
+use Laravel\Reverb\Protocols\Twilio\Channels\Channel;
+use Laravel\Reverb\Protocols\Twilio\Channels\Concerns\InteractsWithPresenceChannels;
+use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelManager;
 
 trait InteractsWithChannelInformation
 {

@@ -4,8 +4,8 @@ namespace Laravel\Reverb\Protocols\Twilio;
 
 use Illuminate\Support\Str;
 use Laravel\Reverb\Application;
-use Laravel\Reverb\Protocols\Pusher\Concerns\InteractsWithChannelInformation;
-use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelManager;
+use Laravel\Reverb\Protocols\Twilio\Concerns\InteractsWithChannelInformation;
+use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelManager;
 use Laravel\Reverb\ServerProviderManager;
 use Laravel\Reverb\Servers\Twilio\Contracts\PubSubProvider;
 use React\Promise\Deferred;

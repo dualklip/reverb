@@ -4,9 +4,9 @@ namespace Laravel\Reverb\Protocols\Twilio\Channels;
 
 use Laravel\Reverb\Contracts\Connection;
 use Laravel\Reverb\Loggers\Log;
-use Laravel\Reverb\Protocols\Pusher\Concerns\SerializesChannels;
-use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelConnectionManager;
-use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelManager;
+use Laravel\Reverb\Protocols\Twilio\Concerns\SerializesChannels;
+use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelConnectionManager;
+use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelManager;
 
 class Channel
 {
@@ -38,7 +38,7 @@ class Channel
     /**
      * Get all connections for the channel.
      *
-     * @return array<string, \Laravel\Reverb\Protocols\Pusher\Channels\ChannelConnection>
+     * @return array<string, \Laravel\Reverb\Protocols\Twilio\Channels\ChannelConnection>
      */
     public function connections(): array
     {

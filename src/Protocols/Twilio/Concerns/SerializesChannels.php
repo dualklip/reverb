@@ -2,7 +2,7 @@
 
 namespace Laravel\Reverb\Protocols\Twilio\Concerns;
 
-use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelConnectionManager;
+use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelConnectionManager;
 
 trait SerializesChannels
 {

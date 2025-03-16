@@ -6,9 +6,9 @@ use Exception;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Laravel\Reverb\Contracts\Connection;
-use Laravel\Reverb\Protocols\Pusher\Channels\CacheChannel;
-use Laravel\Reverb\Protocols\Pusher\Channels\Channel;
-use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelManager;
+use Laravel\Reverb\Protocols\Twilio\Channels\CacheChannel;
+use Laravel\Reverb\Protocols\Twilio\Channels\Channel;
+use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelManager;
 
 class EventHandler
 {

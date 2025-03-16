@@ -9,9 +9,9 @@ use Laravel\Reverb\Contracts\ApplicationProvider;
 use Laravel\Reverb\Contracts\Connection;
 use Laravel\Reverb\Events\ChannelCreated;
 use Laravel\Reverb\Events\ChannelRemoved;
-use Laravel\Reverb\Protocols\Pusher\Channels\Channel;
-use Laravel\Reverb\Protocols\Pusher\Channels\ChannelBroker;
-use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelManager as ChannelManagerInterface;
+use Laravel\Reverb\Protocols\Twilio\Channels\Channel;
+use Laravel\Reverb\Protocols\Twilio\Channels\ChannelBroker;
+use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelManager as ChannelManagerInterface;
 
 class ArrayChannelManager implements ChannelManagerInterface
 {
@@ -20,7 +20,7 @@ class ArrayChannelManager implements ChannelManagerInterface
     /**
      * The underlying array of applications and their channels.
      *
-     * @var array<string, array<string, array<string, \Laravel\Reverb\Protocols\Pusher\Channels\Channel>>>
+     * @var array<string, array<string, array<string, \Laravel\Reverb\Protocols\Twilio\Channels\Channel>>>
      */
     protected $applications = [];
 
@@ -42,7 +42,7 @@ class ArrayChannelManager implements ChannelManagerInterface
     /**
      * Get all the channels.
      *
-     * @return array<string, \Laravel\Reverb\Protocols\Pusher\Channels\Channel>
+     * @return array<string, \Laravel\Reverb\Protocols\Twilio\Channels\Channel>
      */
     public function all(): array
     {
@@ -86,7 +86,7 @@ class ArrayChannelManager implements ChannelManagerInterface
     /**
      * Get all of the connections for the given channels.
      *
-     * @return array<string, \Laravel\Reverb\Protocols\Pusher\Channels\ChannelConnection>
+     * @return array<string, \Laravel\Reverb\Protocols\Twilio\Channels\ChannelConnection>
      */
     public function connections(?string $channel = null): array
     {
@@ -128,7 +128,7 @@ class ArrayChannelManager implements ChannelManagerInterface
     /**
      * Get the channels for the application.
      *
-     * @return \Laravel\Reverb\Protocols\Pusher\Channels\Channel|array<string, \Laravel\Reverb\Protocols\Pusher\Channels\Channel>|null
+     * @return \Laravel\Reverb\Protocols\Twilio\Channels\Channel|array<string, \Laravel\Reverb\Protocols\Twilio\Channels\Channel>|null
      */
     public function channels(?string $channel = null): Channel|array|null
     {
