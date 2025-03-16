@@ -5,7 +5,7 @@ namespace Laravel\Reverb\Protocols\Twilio;
 use Illuminate\Support\Arr;
 use Laravel\Reverb\Application;
 use Laravel\Reverb\Contracts\Connection;
-use Laravel\Reverb\Protocols\Pusher\Contracts\ChannelManager;
+use Laravel\Reverb\Protocols\Twilio\Contracts\ChannelManager;
 use Laravel\Reverb\ServerProviderManager;
 use Laravel\Reverb\Servers\Twilio\Contracts\PubSubProvider;
 

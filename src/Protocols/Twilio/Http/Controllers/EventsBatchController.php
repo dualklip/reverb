@@ -4,9 +4,9 @@ namespace Laravel\Reverb\Protocols\Twilio\Http\Controllers;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Facades\Validator as ValidatorFacade;
-use Laravel\Reverb\Protocols\Pusher\Concerns\InteractsWithChannelInformation;
-use Laravel\Reverb\Protocols\Pusher\EventDispatcher;
-use Laravel\Reverb\Protocols\Pusher\MetricsHandler;
+use Laravel\Reverb\Protocols\Twilio\Concerns\InteractsWithChannelInformation;
+use Laravel\Reverb\Protocols\Twilio\EventDispatcher;
+use Laravel\Reverb\Protocols\Twilio\MetricsHandler;
 use Laravel\Reverb\Servers\Twilio\Http\Connection;
 use Laravel\Reverb\Servers\Twilio\Http\Response;
 use Psr\Http\Message\RequestInterface;

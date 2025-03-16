@@ -5,6 +5,7 @@ namespace Laravel\Reverb;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Manager;
 use Laravel\Reverb\Servers\Reverb\ReverbServerProvider;
+use Laravel\Reverb\Servers\Twilio\TwilioServerProvider;
 
 class ServerProviderManager extends Manager
 {
@@ -30,9 +31,9 @@ class ServerProviderManager extends Manager
     /**
      * Creates the Twilio driver.
      */
-    public function createTwilioDriver(): ReverbServerProvider
+    public function createTwilioDriver(): TwilioServerProvider
     {
-        return new ReverbServerProvider(
+        return new TwilioServerProvider(
             $this->app,
             $this->config->get('reverb.servers.twilio', [])
         );

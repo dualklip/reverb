@@ -2,7 +2,7 @@
 
 namespace Laravel\Reverb\Protocols\Twilio\Channels;
 
-use Laravel\Reverb\Protocols\Pusher\Channels\Concerns\InteractsWithPrivateChannels;
+use Laravel\Reverb\Protocols\Twilio\Channels\Concerns\InteractsWithPrivateChannels;
 
 class PrivateCacheChannel extends CacheChannel
 {
