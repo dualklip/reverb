@@ -58,14 +58,14 @@ class Server
 
             Validator::make($event, ['event' => ['required', 'string']])->validate();
 
-            /*match (Str::isMatch($event['event'], '[start|media|stop|dtmf|mark]')) {
+            match (Str::isMatch($event['event'], '[start|media|stop|dtmf|mark]')) {
                 true => $this->handler->handle(
                     $from,
                     $event['event'],
                     empty($event[$event['event']]) ? [] : $event[$event['event']],
                 ),
                 default => ClientEvent::handle($from, $event)
-            };*/
+            };
 
             Log::info('Message Handled', $from->id());
 
@@ -122,7 +122,7 @@ class Server
             'event' => 'pusher:error',
             'data' => json_encode([
                 'code' => 4200,
-                'message' => 'Invalid message format (Twilio protocol)',
+                'message' => 'Invalid message format',
             ]),
         ]));
 
